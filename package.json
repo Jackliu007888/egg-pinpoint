@@ -1,0 +1,77 @@
+{
+  "name": "@jackliulovelt/egg-pinpoint",
+  "version": "1.0.0",
+  "description": "a egg plugin for pinpoint agent",
+  "eggPlugin": {
+    "name": "pinpoint"
+  },
+  "keywords": [
+    "egg",
+    "eggPlugin",
+    "egg-plugin"
+  ],
+  "devDependencies": {
+    "autod": "^3.0.1",
+    "autod-egg": "^1.1.0",
+    "egg": "^2.16.0",
+    "egg-bin": "^4.11.0",
+    "egg-ci": "^1.11.0",
+    "egg-mock": "^3.21.0",
+    "eslint": "^5.13.0",
+    "eslint-config-egg": "^7.1.0",
+    "mocha": "^2.5.3",
+    "rewire": "^2.5.2",
+    "chai": "^3.5.0",
+    "async-listener": "^0.6.3",
+    "bluebird": "^3.4.6",
+    "continuation-local-storage": "^3.1.7",
+    "cpu-usage": "^0.1.0",
+    "emitter-listener": "^1.0.1",
+    "express": "^4.17.1",
+    "koa": "^2.11.0",
+    "koa-router": "^7.4.0",
+    "later": "^1.2.0",
+    "lodash": "^4.13.1",
+    "log4js": "^0.6.36",
+    "moment": "^2.13.0",
+    "node-int64": "^0.4.0",
+    "node-schedule": "^1.1.1",
+    "pidusage": "^1.0.7",
+    "shelljs": "^0.7.0",
+    "shimmer": "^1.1.0",
+    "stack-trace": "^0.0.9",
+    "thrift": "^0.9.3",
+    "util": "^0.10.3"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "scripts": {
+    "test": "npm run lint -- --fix && egg-bin pkgfiles && npm run test-local",
+    "test-local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "ci": "egg-bin pkgfiles --check && npm run lint && npm run cov",
+    "pkgfiles": "egg-bin pkgfiles",
+    "autod": "autod"
+  },
+  "files": [
+    "app.js",
+    "agent.js",
+    "config",
+    "app"
+  ],
+  "ci": {
+    "version": "8, 10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eggjs/egg-pinpoint-agent.git"
+  },
+  "bugs": {
+    "url": "https://github.com/eggjs/egg/issues"
+  },
+  "homepage": "https://github.com/eggjs/egg-pinpoint-agent#readme",
+  "author": "Jackliu007888",
+  "license": "MIT"
+}
